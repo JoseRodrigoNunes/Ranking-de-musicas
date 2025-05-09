@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação de Vídeos do YouTube</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Comparação de Vídeos do YouTube</h1>
+    </header>
+    <main>
+        <section id="input-section">
+            <textarea id="links-input" placeholder="Insira os links do YouTube ou YouTube Music aqui, um por linha..."></textarea>
+            <input type="file" id="file-input" accept=".txt">
+            <button id="start-comparison">Iniciar Comparação</button>
+            <p id="error-message">A lista deve conter um número par de links.</p>
+        </section>
+        <section id="comparison-section">
+            <div id="video-pair">
+                <div class="video-wrapper">
+                    <iframe id="video1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper" id="video2-wrapper">
+                    <iframe id="video2" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="choices">
+                <button id="choose-video1">Escolher Vídeo 1</button>
+                <button id="choose-both">Empate (0)</button>
+                <button id="choose-video2">Escolher Vídeo 2</button>
+            </div>
+            <div id="choices">
+                <button id="status-panel">Status do torneio</button>
+            </div>
+        </section>
+        <section id="results-section">
+            <h2>Resultados</h2>
+            <ul id="results-list"></ul>
+            <button id="continue-selection">Continuar Seleção</button>
+        </section>
+        <section id="winner-section">
+            <h2>Vencedor!</h2>
+            <div class="video-wrapper">
+                <iframe id="winner-video" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Popup de Status do Torneio -->
+        <div id="status-popup" style="display: none;">
+            <div id="status-content">
+                <h2>Status do Torneio</h2>
+                <ul id="video-status-list"></ul>
+                <button id="close-status">Fechar</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
